@@ -1,0 +1,178 @@
+body {
+  font-size: 16px;
+  color: #fff;
+  font-family: 'Yrsa', serif;
+  background: url('../images/background-sky_lg.jpg');
+}
+.glyphicon {
+  vertical-align: middle;
+}
+
+/** HEADER **/
+#header-nav {
+  background-color: #ffff4c;
+  border-radius: 0;
+  border: 0;
+}
+
+#logo-img {
+  background: url('../images/bed-logo_medium.png') no-repeat;
+  width: 104px;
+  height: 104px;
+  margin: 10px 15px 10px 0;
+}
+
+.navbar-brand {
+  padding-top: 25px;
+}
+
+.navbar-brand h1 { /* Shop name */
+  font-family: 'Indie Flower', cursive;
+  color: #2a87e2;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-position: .75;
+}
+.navbar-brand a:hover, navbar-brand a:focus {
+  text-decoration: none;
+}
+.navbar-brand p {
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  margin-top: 15px;
+}
+
+#nav-list {
+  margin-top: 10px;
+}
+#nav-list a {
+  color: #2a87e2;
+  text-align: center;
+}
+#nav-list a:hover {
+  background: #ffff93;
+}
+#nav-list a span {
+  font-size: 1.8em;
+  margin-bottom: 5px;
+}
+
+#phone {
+  color: #0e89bc;
+  text-align: center;
+}
+#phone a {
+  text-align: right;
+  padding-bottom: 0;
+}
+#nav-list #symbol {
+  font-size: 1.2em;
+  padding-bottom: 2px;
+}
+
+#phone div {
+  color: #0e89bc;
+  text-align: right;
+  font-size: 1.5em;
+  padding-right: 15px;
+}
+#nav-list #phone #xs-deliver {
+  /* overwrites "We Deliver" in lg,md,sm */
+  text-align: center;
+}
+.glyphicon-random {
+  /* seperates glyphicon-random from "We Deliver" */
+  margin-right: 10px;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #0e89bc;
+}
+
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
+
+/*End Header*/
+
+/* Large devices only*/
+@media (min-width: 1200px) {
+  body {
+    background: url('../images/background-sky_lg.jpg');
+  }
+}
+/* medium devices only*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  body {
+    background: url('../images/background-sky_md.jpg');
+  }
+  #logo-img {
+    background: url('../images/bed-logo_small.png') no-repeat;
+    width: 50px;
+    height: 50px;
+    margin: 20px 10px 10px 0;
+  }
+}
+/* small devices only*/
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    background: url('../images/background-sky_sm.jpg');
+  }
+  #sleep-lab {
+    position: absolute;
+    top: 20px;
+    right: 250px;
+    float: right;
+  }
+  #nav-list {
+    float: left !important;
+    margin-left: 120px;
+  }
+}
+/*********** extra small devices only************/
+@media (max-width: 767px) {
+  body {
+    background: url('../images/background-sky_xs.jpg');
+  }
+  .navbar-brand {
+    padding-top: 10px;
+    height: 80px;
+  }
+  .navbar-brand h1 {
+    padding-top: 10px;
+    font-size: 5vw;
+  }
+  .navbar-brand p {
+    font-size: .6em;
+    margin-top: 12px;
+  }
+  .navbar-brand p img {
+    height: 20px;
+  }
+  #collapsable-nav a {
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span {
+    font-size: 1em;
+    margin-right: 5px;
+  }
+  #call-btn > a {
+    font-size: 1.5em;
+    display: block;
+    margin: 0 20px;
+    padding: 10px;
+    border: 2px solid #fff;
+    background-color: #2a87e2;;
+    color: #ffff4c;
+  }
+  #xs-deliver {
+    font-size: 1.5em;
+  }
+
+}
