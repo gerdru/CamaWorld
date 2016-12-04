@@ -109,6 +109,69 @@ body {
   border: 2px solid #0e89bc;
 }
 
+#menu-tile, #specials-tile, #map-tile {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 2px solid #0e89bc;
+  overflow: hidden;
+}
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+  box-shadow: 2px 2px 10px 2px #ffff4c;
+}
+#menu-tile {
+  background: url('../images/bed400.jpg') no-repeat;
+  background-position: center;
+}
+#specials-tile {
+  background: url('../images/oferta400.jpg') no-repeat;
+  background-position: center;
+}
+#menu-tile span, #specials-tile span, #map-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: #0e89bc;
+  color: #fff;
+  opacity: .8;
+}
+/* End Home Page */
+/* Footer */
+.panel-footer {
+  margin-top: 30px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  background-color: #0e89bc;
+  border-top: 0;
+}
+.panel-footer div.row {
+  margin-bottom: 35px;
+}
+#hours, #address {
+  line-height: 2;
+}
+#hours >span, #address >span {
+  font-size: 1.3em;
+}
+#address p {
+  color: #000;
+  font-size: .8em;
+  line-height: 1.8;
+}
+#testimonials {
+  font-style: italic;
+}
+#testimonials p:nth-child(2){
+  margin-top: 25px;
+}
+/* End Footer */
+
+
 /* Large devices only*/
 @media (min-width: 1200px) {
   body {
@@ -165,7 +228,7 @@ body {
 /*********** extra small devices only************/
 @media (max-width: 767px) {
   body {
-    background: url('../images/background-sky_xs.jpg');
+    background: url('../images/background-sky_xs1.jpg');
   }
   .navbar-brand {
     padding-top: 10px;
@@ -202,8 +265,42 @@ body {
     font-size: 1.5em;
     margin-top: 10px;
   }
+  /* End Header */
+
+  /* Home Page */
   .container .jumbotron {
     margin-top: 30px;
     padding: 0;
+  }
+  #menu-tile, #specials-tile {
+    width: 400px;
+    margin: 0 auto 15px;
+  }
+  /* Footer */
+    .panel-footer section {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .panel-footer section:nth-child(3){
+      margin-bottom: 0;
+    }
+    .panel-footer section hr {
+      width: 50%;
+    }
+
+  /* End Footer */
+  
+}
+/********** Super extra small devices only e.g. iPhone4 *********/
+@media (max-width: 479px) {
+  /* Header */
+  .navbar-brand h1 { /* Shop Name*/
+    padding-top: 5px;
+    font-size: 7vw;
+  }
+  /* Home Page */
+  #menu-tile, #specials-tile {
+    width: 280px;
+    margin: 0 auto 15px;
   }
 }
