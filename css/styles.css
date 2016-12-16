@@ -265,9 +265,8 @@ body {
     right: 250px;
     float: right;
   }
-  #nav-list {
-    float: left !important;
-    margin-left: 120px;
+#nav-list {
+    margin-left: 10px;
   }
   .container .jumbotron {
     background: url('../images/jumbotron_768.jpg') no-repeat;
@@ -301,6 +300,14 @@ body {
     font-size: 1em;
     margin-right: 5px;
   }
+  #nav-list{
+    float: none;
+  }
+  #nav-list li {
+  }
+  #nav-list li a {
+    text-align: center;
+  }
   #call-btn > a {
     font-size: 1.5em;
     display: block;
@@ -322,7 +329,7 @@ body {
     padding: 0;
   }
   #menu-tile, #specials-tile {
-    width: 400px;
+    width: 100%;
     margin: 0 auto 15px;
   }
   /* Footer */
@@ -349,7 +356,7 @@ body {
   }
   /* Home Page */
   #menu-tile, #specials-tile {
-    width: 280px;
+    width: 100%;
     margin: 0 auto 15px;
   }
   .col-xxs-12 {
