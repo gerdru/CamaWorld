@@ -1,3 +1,6 @@
+html, body {
+  height: 100%;
+}
 body {
   font-size: 16px;
   color: #2a87e2;
@@ -7,10 +10,16 @@ body {
 .glyphicon {
   vertical-align: middle;
 }
+/* settings to fix footer to the bottom on md, lg devices */
+#holder {
+  min-height: 100%;
+  position: relative;
+}
+/* end setting, more changes see @media settings for md, lg devices  */
 
 /** HEADER **/
 #header-nav {
-  background-color: #FFFFFF;
+  background-color: #2a87e2;
   border-radius: 0;
   border: 0;
 }
@@ -28,7 +37,7 @@ body {
 
 .navbar-brand h1 { /* Shop name */
   font-family: 'Indie Flower', cursive;
-  color: #2a87e2;
+  color: #fff;
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: bold;
@@ -41,7 +50,7 @@ body {
   text-decoration: none;
 }
 .navbar-brand p {
-  color: inherit;
+  color: #fff;
   text-transform: uppercase;
   font-size: 0.7em;
   margin-top: 15px;
@@ -52,12 +61,20 @@ body {
   float: right;
 }
 #nav-list a {
-  color: #2a87e2;
-  text-align: center;
+  color: #fff;
+  text-align:center;
   font-weight: bolder;
 }
+#nav-list .glyphicon-info-sign, .glyphicon-bed {
+  /* manually horizontally adjusting the glyphicons */
+  padding-left: 3px;
+}
+
 #nav-list a:hover {
-  background: #d4e7f9;
+  background: #69ABEA;
+}
+#nav-list .active>a {
+  background: #69ABEA;
 }
 #nav-list a span {
   font-size: 1.8em;
@@ -99,12 +116,16 @@ body {
 }
 
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
-  border: 1px solid #0e89bc;
+  border: 1px solid #fff;
 }
 
 .navbar-header button.navbar-toggle {
   clear: both;
   margin-top: -30px;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: #69ABEA;
+  background-image: none;
 }
 
 /*End Header*/
@@ -180,13 +201,14 @@ body {
 /* End Home Page */
 
 /******** BEDS PAGE **********/
-#bed-title {
+.bed-title {
   text-shadow: 5px 2px 2px #fff;
   font-size: 2.8em;
   font-weight: bolder;
 }
-#bed-title + div{
+.bed-title + div{
   font-size: 1.8em;
+  font-weight: bolder;
   text-shadow: 5px 2px 2px #fff;
   margin-bottom: 50px;
 }
@@ -213,24 +235,89 @@ body {
 .category-tile:hover {
   box-shadow: 3px 3px 8px 5px #d4e7f9;
 }
-
-
-
 /******** END BEDS PAGE **********/
+
+/******** SINGLE BEDS PAGE **********/
+.menu-item-tile {
+  margin-bottom: 25px;
+}
+.menu-item-tile hr {
+  width: 80%;
+  border-color: #2a87e2;
+}
+
+.menu-item-photo {
+  position: relative;
+  border: 2px solid #fff;
+  overflow: hidden;
+  padding: 0;
+  margin-right: -15px;
+  margin-left: auto;
+  margin-bottom: 20px;
+  max-width: 250px;
+}
+.menu-item-price {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80px;
+  background-color: #2a87e2;
+  text-align: center;
+}
+h3.menu-item-title {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin: 0 0 10px;
+  background-color: #fff;
+}
+.menu-item-description {
+  /*
+  padding-right: 30px;
+  */
+}
+
+h3.menu-item-title span {
+  padding-left: 10px;
+}
+
+.menu-item-details {
+  height: 100%;
+  font-style: italic;
+  padding: 10px 14px 7px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background-color: #2a87e2;
+  font-size: .9em;
+}
+
+/******** END SINGLE BEDS PAGE **********/
 
 /* Large devices only*/
 @media (min-width: 1200px) {
   body {
     background: url('../images/background-sky_lg.jpg');
   }
+  #main-content {
+    padding-bottom:300px
+  }
+  footer{
+    height: 300px;
+    width:100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
   .container .jumbotron {
     background: url('../images/jumbotron_1200.jpg') no-repeat;
     height: 675px;
   }
   .row div {
-    margin-right: 20px;
+    margin-right: 0px;
   }
 }
+
 /* medium devices only*/
 @media (min-width: 992px) and (max-width: 1199px) {
   /* HEADER, the following overwrites bootstrap */
@@ -241,6 +328,16 @@ body {
   body {
     background: url('../images/background-sky_md.jpg');
   }
+  #main-content {
+    padding-bottom:350px
+  }
+  footer{
+    height: 350px;
+    width:100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
   #logo-img {
     background: url('../images/bed-logo_small.png') no-repeat;
     width: 50px;
@@ -315,24 +412,17 @@ body {
     padding: 10px;
     border: 2px solid #fff;
     background-color: #2a87e2;;
-    color: #ffff4c;
+    color: #fff;
   }
   #xs-deliver {
+    text-shadow: 5px 2px 2px #fff;
+    font-weight: bold;
     font-size: 1.5em;
     margin-top: 10px;
   }
   /* End Header */
 
-  /* Home Page */
-  .container .jumbotron {
-    margin-top: 30px;
-    padding: 0;
-  }
-  #menu-tile, #specials-tile {
-    width: 100%;
-    margin: 0 auto 15px;
-  }
-  /* Footer */
+    /* Footer */
     .panel-footer section {
       margin-bottom: 30px;
       text-align: center;
@@ -345,6 +435,24 @@ body {
     }
 
   /* End Footer */
+
+  /* Home Page */
+  .container .jumbotron {
+    margin-top: 30px;
+    padding: 0;
+  }
+  #menu-tile, #specials-tile {
+    width: 100%;
+    margin: 0 auto 15px;
+  }
+
+  /*** Single Beds Page ***/
+  .menu-item-photo {
+    margin-right: auto;
+  }
+  .menu-item-description{
+    text-align: center;
+  }
 
 }
 /********** Super extra small devices only e.g. iPhone4 *********/
